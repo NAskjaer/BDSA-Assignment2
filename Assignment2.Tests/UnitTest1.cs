@@ -47,7 +47,7 @@ namespace Assignment2.Tests
         {
             Library.Student test = new Library.Student(0, "New", "Student", new DateTime(2018, 9, 22), new DateTime(2021, 9, 22), new DateTime(2021, 9, 22));
             var actual = test.ToString();
-            var expected = "Id: 0, New Student - Graduated, Start Date: 22-09-2018 00:00:00, End Date: 22-09-2021 00:00:00, Graduation Date: 22-09-2021 00:00:00";
+            var expected = "Id: 0, New Student (Graduated), Start Date: 09/22/2018, End Date: 09/22/2021, Graduation Date: 09/22/2021";
             Assert.Equal(expected,actual);
         }
 
@@ -106,9 +106,9 @@ namespace Assignment2.Tests
         [Fact]
         public void ImmutableStudents_ToString()
         {
-            Library.Student test = new Library.Student(0, "New", "Student", new DateTime(2018, 9, 22), new DateTime(2021, 9, 22), new DateTime(2021, 9, 22));
+            Library.ImmutableStudent test = new Library.ImmutableStudent(0, "New", "Student", new DateTime(2018, 9, 22), new DateTime(2021, 9, 22), new DateTime(2021, 9, 22));
             var actual = test.ToString();
-            var expected = "Id: 0, New Student - Graduated, Start Date: 22-09-2018 00:00:00, End Date: 22-09-2021 00:00:00, Graduation Date: 22-09-2021 00:00:00";
+            var expected = "Id: 0, New Student (Graduated), Start Date: 09/22/2018, End Date: 09/22/2021, Graduation Date: 09/22/2021";
             Assert.Equal(expected,actual);
         } 
     }

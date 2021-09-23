@@ -44,7 +44,7 @@ namespace Assignment2 {
             }
 
             public override string ToString(){
-                return $"Id: {Id}, {GivenName} {Surname} - {getStatus()}, Start Date: {StartDate}, End Date: {EndDate}, Graduation Date: {GraduationDate}";
+                return $"Id: {Id}, {GivenName} {Surname} ({Status}), Start Date: {StartDate.ToString("MM/dd/yyyy")}, End Date: {EndDate.ToString("MM/dd/yyyy")}, Graduation Date: {GraduationDate.ToString("MM/dd/yyyy")}".Replace("-","/");
             }
 
         }
@@ -85,7 +85,7 @@ namespace Assignment2 {
             }
             
             public override string ToString(){
-                return $"Id: {Id}, {GivenName} {Surname} - {Status}, Start Date: {StartDate}, End Date: {EndDate}, Graduation Date: {GraduationDate}";
+                return $"Id: {Id}, {GivenName} {Surname} ({Status}), Start Date: {StartDate.ToString("MM/dd/yyyy")}, End Date: {EndDate.ToString("MM/dd/yyyy")}, Graduation Date: {GraduationDate.ToString("MM/dd/yyyy")}".Replace("-","/");
             }
         }
         
